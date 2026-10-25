@@ -53,12 +53,15 @@
             - material: ReinforcedGlass
               amount: 2
               doAfter: 4
+<<<<<<< HEAD
 
         - to: clockworkWindow
           steps:
             - material: ClockworkGlass
               amount: 2
               doAfter: 3
+=======
+>>>>>>> 1edb6c523f98
 
         # _SE start
         - to: reinforcedWindowKriss
@@ -234,29 +237,6 @@
             - tool: Anchoring
               doAfter: 3
 
-    - node: clockworkWindow
-      entity: ClockworkWindow
-      edges:
-        - to: start
-          completed:
-            - !type:GivePrototype
-              prototype: SheetClockworkGlass1
-              amount: 2
-            - !type:DeleteEntity {}
-          steps:
-            - tool: Welding
-              doAfter: 5
-            - tool: Screwing
-              doAfter: 2
-            - tool: Prying
-              doAfter: 3
-            - tool: Welding
-              doAfter: 5
-            - tool: Screwing
-              doAfter: 2
-            - tool: Anchoring
-              doAfter: 3
-    
     - node: shuttleWindow
       entity: ShuttleWindow
       edges:
