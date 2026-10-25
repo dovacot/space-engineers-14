@@ -11,15 +11,20 @@ public sealed partial class PdaVisualizerSystem : VisualizerSystem<PdaVisualsCom
         if (args.Sprite == null)
             return;
 
-        if (AppearanceSystem.TryGetData<string>(uid, PdaVisuals.PdaType, out var pdaType, args.Component))
+        if (args.TryGetData<string>(PdaVisuals.PdaType, out var pdaType))
             SpriteSystem.LayerSetRsiState((uid, args.Sprite), PdaVisualLayers.Base, pdaType);
 
+<<<<<<< HEAD
         if (AppearanceSystem.TryGetData<bool>(uid, UnpoweredFlashlightVisuals.LightOn, out var isFlashlightOn, args.Component)
             && SpriteSystem.LayerMapTryGet((uid, args.Sprite), PdaVisualLayers.Flashlight, out _, false))
         {
+=======
+        if (args.TryGetData<bool>(UnpoweredFlashlightVisuals.LightOn, out var isFlashlightOn))
+>>>>>>> 56117b042605490051cb5708c4be0
             SpriteSystem.LayerSetVisible((uid, args.Sprite), PdaVisualLayers.Flashlight, isFlashlightOn);
         }
 
+<<<<<<< HEAD
         if (AppearanceSystem.TryGetData<bool>(uid, PdaVisuals.IdCardInserted, out var isCardInserted, args.Component))
         {
             if (SpriteSystem.LayerMapTryGet((uid, args.Sprite), PdaVisualLayers.IdLight, out _, false))
@@ -28,6 +33,10 @@ public sealed partial class PdaVisualizerSystem : VisualizerSystem<PdaVisualsCom
             if (SpriteSystem.LayerMapTryGet((uid, args.Sprite), PdaVisualLayers.CardVisible, out _, false))
                 SpriteSystem.LayerSetVisible((uid, args.Sprite), PdaVisualLayers.CardVisible, isCardInserted);
         }
+=======
+        if (args.TryGetData<bool>(PdaVisuals.IdCardInserted, out var isCardInserted))
+            SpriteSystem.LayerSetVisible((uid, args.Sprite), PdaVisualLayers.IdLight, isCardInserted);
+>>>>>>> 56117b042605490051cb5708c4be0
     }
 
     public enum PdaVisualLayers : byte
