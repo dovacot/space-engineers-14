@@ -7,6 +7,7 @@
   - type: Sprite
     noRot: true
     sprite: Structures/Machines/tech_disk_printer.rsi
+<<<<<<< HEAD
     layers:
     - map: ["computerLayerBody"]
       state: icon
@@ -22,6 +23,14 @@
           West: { state: icon, sprite: Structures/Machines/tech_disk_printer.rsi }
           East, West: { state: icon, sprite: Structures/Machines/tech_disk_printer.rsi }
   # ADT-Tweak end
+=======
+  - type: ComputerVisuals
+    stateFrame: icon
+    stateKeyboard: null
+    stateScreen: unshaded
+    stateKeys: null
+    statePanel: panel
+>>>>>>> d9a25037a70223dab98e08d3d9126458415c751a
   - type: DiskConsole
   - type: ResearchClient
   - type: ActivatableUI

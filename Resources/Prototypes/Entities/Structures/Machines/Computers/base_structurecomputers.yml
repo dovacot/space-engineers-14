@@ -27,17 +27,19 @@
   - type: Sprite
     sprite: Structures/Machines/computers.rsi
     layers:
-    - map: ["computerLayerBody"]
-      state: computer
-    - map: ["computerLayerKeyboard"]
-      state: generic_keyboard
-    - map: ["computerLayerScreen"]
-      state: generic
-    - map: ["computerLayerKeys"]
-      state: generic_keys
-    - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
-      state: generic_panel_open
+    - map: ["enum.ComputerVisualLayers.Frame"]
+    - map: ["enum.ComputerVisualLayers.Keyboard"]
+    - map: ["enum.ComputerVisualLayers.Screen"]
+    - map: ["enum.ComputerVisualLayers.Keys"]
+    - map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: ComputerVisuals
+    stateFrame: computer
+    stateKeyboard: generic_keyboard
+    stateScreen: generic
+    stateKeys: generic_keys
+    statePanel: generic_panel_open
   - type: Appearance
+<<<<<<< HEAD
   - type: EdgeConnection # ADT-Tweak
     connectionKey: computer-console
     allowedDirections: East, West
@@ -62,6 +64,8 @@
           East: { state: computer_l, sprite: _ADT/Structures/Machines/computers.rsi }
           East, West: { state: computer_l_r, sprite: _ADT/Structures/Machines/computers.rsi }
       # ADT-Tweak end
+=======
+>>>>>>> d9a25037a70223dab98e08d3d9126458415c751a
   - type: LitOnPowered
   - type: PointLight
     radius: 1.5
